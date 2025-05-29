@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Validador de Nicho + Planejador de Produto</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="auth-screen" class="auth-screen">
+    <h2>Digite a chave de acesso para continuar</h2>
+    <input type="password" id="accessKey" placeholder="Senha" />
+    <button onclick="validateKey()">Entrar</button>
+    <p id="error-message" class="error"></p>
+  </div>
+
+  <div id="main-content" class="hidden">
+    <header>
+      <h1>Validador de Nicho + Planejador de Produto</h1>
+      <p class="slogan">Descubra produtos com real potencial de vendas</p>
+    </header>
+
+    <main>
+      <section class="tool-section">
+        <h2>Validação de Nicho</h2>
+        <input type="text" placeholder="Digite uma palavra-chave..." />
+        <button>Ver Tendência</button>
+      </section>
+
+      <section class="tool-section">
+        <h2>Avaliação de Produto</h2>
+        <form>
+          <label>Preço médio do produto</label>
+          <input type="number" placeholder="Ex: 97" />
+          <label>Nível de concorrência (1 a 10)</label>
+          <input type="number" placeholder="Ex: 7" />
+          <button type="submit">Avaliar Produto</button>
+        </form>
+      </section>
+
+      <section class="tool-section">
+        <h2>Sugestão de Produtos</h2>
+        <button>Gerar Ideias</button>
+      </section>
+
+      <section class="tool-section">
+        <h2>Plano em PDF</h2>
+        <button>Gerar PDF</button>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
