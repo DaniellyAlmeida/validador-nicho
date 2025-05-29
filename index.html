@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Validador de Nicho</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    #login-screen, #main-site {
+      display: none;
+      width: 100%;
+      text-align: center;
+    }
+    #login-screen.active, #main-site.active {
+      display: block;
+    }
+    input[type="password"] {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      background: #00c9ff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      color: #000;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    .error {
+      color: red;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="login-screen" class="active">
+  <h1>Digite a chave de acesso para continuar</h1>
+  <input type="password" id="password" placeholder="Chave de acesso" />
+  <br />
+  <button onclick="checkPassword()">Entrar</button>
+  <div class="error" id="error-msg"></div>
+</div>
+
+<div id="main-site">
+  <h1>Validador de Nicho + Planejador de Produto</h1>
+  <p>Parabéns! Você acessou o site corretamente. O conteúdo principal será carregado aqui.</p>
+</div>
+
+<script>
+  function checkPassword() {
+    const input = document.getElementById("password").value;
+    if (input === "Pdrx2025") {
+      document.getElementById("login-screen").classList.remove("active");
+      document.getElementById("main-site").classList.add("active");
+    } else {
+      document.getElementById("error-msg").innerText = "Chave incorreta, tente novamente";
+    }
+  }
+</script>
+
+</body>
+</html>
