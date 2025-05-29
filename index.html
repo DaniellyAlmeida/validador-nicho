@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador de Nicho</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+        body {
+            background-color: #f4f6f8;
+            color: #1f2937;
+        }
+        .centered {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-box {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+        }
+        input[type="password"] {
+            padding: 12px;
+            width: 100%;
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        button {
+            background-color: #3b82f6;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            margin-top: 20px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .hidden {
+            display: none;
+        }
+        .main-content {
+            padding: 40px;
+            text-align: center;
+        }
+        .main-content h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .main-content p {
+            color: #4b5563;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="centered" id="login-section">
+    <div class="login-box">
+        <h2>Digite a chave de acesso para continuar</h2>
+        <input type="password" id="password" placeholder="Senha de acesso">
+        <button onclick="checkPassword()">Entrar</button>
+        <p id="error-message" style="color: red; display: none; margin-top: 10px;">Chave incorreta, tente novamente.</p>
+    </div>
+</div>
+
+<div id="main-content" class="main-content hidden">
+    <h1>Validador de Nicho + Planejador de Produto</h1>
+    <p>Ferramenta profissional para descobrir produtos vencedores e nichos lucrativos.</p>
+    <!-- Aqui você poderá inserir mais seções futuramente -->
+</div>
+
+<script>
+    const correctPassword = "Pdrx2025";
+
+    function checkPassword() {
+        const input = document.getElementById("password").value;
+        if (input === correctPassword) {
+            document.getElementById("login-section").classList.add("hidden");
+            document.getElementById("main-content").classList.remove("hidden");
+        } else {
+            document.getElementById("error-message").style.display = "block";
+        }
+    }
+</script>
+
+</body>
+</html>
