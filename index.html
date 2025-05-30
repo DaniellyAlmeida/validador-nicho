@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador de Nicho</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-screen">
+        <h2>🔐 Digite a chave de acesso para continuar</h2>
+        <input type="password" id="password-input" placeholder="Chave de acesso">
+        <button onclick="checkPassword()">Entrar</button>
+        <p id="error-msg"></p>
+    </div>
+
+    <div id="main-content" style="display: none;">
+        <h1>Validador de Nicho + Planejador de Produto</h1>
+        <p>Ferramenta para descobrir produtos vencedores e nichos lucrativos.</p>
+
+        <input type="text" id="keyword" placeholder="Digite uma palavra-chave">
+        <button onclick="buscarTendencias()">Ver Tendências</button>
+        <button onclick="gerarSugestoes()">Sugestões de Produto</button>
+        <pre id="output"></pre>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
