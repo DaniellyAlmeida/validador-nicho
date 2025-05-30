@@ -1,0 +1,1 @@
+// Aqui entra a integração real com RapidAPI ou Google Trends futuramente.
